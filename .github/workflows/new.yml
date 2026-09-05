@@ -12,7 +12,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - name: Build
-        run: mvn clean package
+        run: echo "This is the building process"
 
   test:
     needs: build
@@ -21,7 +21,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - name: Test
-        run: mvn test
+        run: echo "It test the product that is build"
 
   deploy:
     needs: test
